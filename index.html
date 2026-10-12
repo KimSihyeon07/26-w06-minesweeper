@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#e7eee8">
+  <title>지뢰찾기 · Field 09</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="page">
+    <header class="masthead">
+      <div class="brand"><span class="brand-mark" aria-hidden="true">✳</span><span>FIELD STUDY / 09</span></div>
+      <span class="edition" id="edition">BEGINNER EDITION · 001</span>
+    </header>
+
+    <section class="intro" aria-labelledby="game-title">
+      <h1 id="game-title">지뢰찾기</h1>
+      <label class="difficulty-control" for="difficulty">
+        <span>난이도</span>
+        <select class="difficulty-select" id="difficulty" aria-label="난이도 선택">
+          <option value="beginner">초급</option>
+          <option value="intermediate">중급</option>
+          <option value="advanced">고급</option>
+        </select>
+      </label>
+    </section>
+
+    <section class="game-layout" aria-label="지뢰찾기 게임">
+      <div class="board-wrap">
+        <div class="board-topline"><span>FIELD GRID</span><span id="board-summary">81 CELLS / 10 MINES</span></div>
+        <div class="board" id="board" role="grid" aria-label="9행 9열 지뢰찾기 격자"></div>
+      </div>
+
+      <aside class="side" aria-label="게임 정보">
+        <div class="status-bar">
+          <div class="status-copy" aria-live="polite">
+            <div class="eyebrow">CURRENT STATUS</div>
+            <div class="status-text" id="status">첫 칸을 열어 시작하세요</div>
+          </div>
+          <button class="restart" id="restart" type="button" aria-label="새 게임 시작" title="새 게임 시작">☺</button>
+        </div>
+
+        <div class="readouts">
+          <div class="readout">
+            <div class="readout-label">MINES LEFT</div>
+            <div class="readout-value mines-value" id="mine-counter" aria-live="polite">10</div>
+          </div>
+          <div class="readout">
+            <div class="readout-label">ELAPSED</div>
+            <div class="readout-value time-value" id="timer" aria-label="경과 시간 0초">000</div>
+          </div>
+        </div>
+
+        <div class="field-note">
+          <div class="field-note-title">FIELD / SPECIMEN</div>
+          <div class="field-note-main" id="difficulty-name">초급 지뢰 지대</div>
+          <div class="field-note-meta"><span>AREA</span><span id="area-size">9 × 9</span></div>
+          <div class="field-note-meta"><span>HAZARDS</span><span id="hazard-count">10</span></div>
+        </div>
+      </aside>
+    </section>
+
+    <footer class="footer"><span>FIELD NOTES · 09</span><span>MINESWEEPER</span></footer>
+  </main>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
