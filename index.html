@@ -41,6 +41,15 @@
           <button class="restart" id="restart" type="button" aria-label="새 게임 시작" title="새 게임 시작">☺</button>
         </div>
 
+        <div class="sound-controls" aria-label="소리 설정">
+          <button class="sound-toggle" id="music-toggle" type="button" aria-pressed="false" aria-label="배경 음악 켜기" title="배경 음악 켜기">
+            <span class="sound-icon" aria-hidden="true">♫</span><span>배경 음악</span><span class="sound-state" id="music-state">끔</span>
+          </button>
+          <button class="sound-toggle" id="sfx-toggle" type="button" aria-pressed="true" aria-label="효과음 끄기" title="효과음 끄기">
+            <span class="sound-icon" aria-hidden="true">♪</span><span>효과음</span><span class="sound-state" id="sfx-state">켬</span>
+          </button>
+        </div>
+
         <div class="readouts">
           <div class="readout">
             <div class="readout-label">남은 지뢰</div>
@@ -58,6 +67,14 @@
           <div class="field-note-meta"><span>AREA</span><span id="area-size">9 × 9</span></div>
           <div class="field-note-meta"><span>HAZARDS</span><span id="hazard-count">10</span></div>
         </div>
+
+        <section class="ranking" aria-labelledby="ranking-title">
+          <div class="ranking-heading">
+            <h2 id="ranking-title">최고 기록</h2>
+            <span id="ranking-difficulty">초급</span>
+          </div>
+          <ol class="ranking-list" id="ranking-list" aria-live="polite"></ol>
+        </section>
       </aside>
     </section>
 
